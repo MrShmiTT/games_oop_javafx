@@ -4,11 +4,9 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean rsl = false;
         for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 1) {
-                if (checkRow(board, i) || checkColumn(board, i)) {
-                    rsl = true;
-                    break;
-                }
+            if (board[i][i] == 1 && (checkRow(board, i) || checkColumn(board, i))) {
+                rsl = true;
+                break;
             }
         }
         return rsl;
